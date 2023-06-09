@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* colors */
+	--backgroundColor: #0a0c1b;
+	--wrapperColor: #1c1938;
+	--fontPink: #a360d2;
+	--fontGrey: #aaa7c2;
+	--white: #fafafe;
+
+	/* fonts */
+	--inter: 'Inter', sans-serif;
+	--LexendDeca: 'Lexend Deca', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--backgroundColor);
+}
+
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--wrapperColor);
+	margin: 100px 25px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.content-wrapper {
+	padding: 0 20px;
+}
+
+.hero-image {
+	position: relative;
+	margin-bottom: 45px;
+	width: 100%;
+}
+
+.hero-image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.pink-div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--fontPink);
+	opacity: 0.5;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-family: var(--LexendDeca);
+	font-size: 25px;
+	color: var(--white);
+	margin-bottom: 22px;
+}
+
+.pink {
+	color: var(--fontPink);
+}
+
+.description {
+	text-align: center;
+	font-family: var(--inter);
+	font-size: 13px;
+	color: var(--fontGrey);
+	line-height: 18px;
+	margin-bottom: 50px;
+}
+
+footer .statistic {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.bigger {
+	font-size: 20px;
+	font-family: var(--inter);
+	font-weight: 700;
+	color: var(--white);
+	margin-bottom: 15px;
+}
+
+.smaller {
+	color: var(--fontGrey);
+	font-family: var(--inter);
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+footer > div:not(:last-child) {
+	margin-bottom: 35px;
+}
+
+@media only screen and (min-width: 1120px) {
+	.main-wrapper {
+		height: 445px;
+		width: 1111px;
+		margin: 0;
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	.hero-image {
+		width: 50%;
+		height: 100%;
+		margin: 0;
+	}
+
+	.pink-div {
+		height: 100%;
+	}
+
+	.content-wrapper {
+		width: 50%;
+		padding: 70px;
+	}
+
+	header,
+	.description {
+		text-align: left;
+	}
+
+	.description {
+		padding-right: 45px;
+		font-size: 14.5px;
+		line-height: 1.5;
+		margin-bottom: 90px;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 80px;
+	}
+}
